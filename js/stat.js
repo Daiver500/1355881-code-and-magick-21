@@ -7,13 +7,14 @@ var CLOUD_Y = 50;
 var GAP = 10;
 var FONT_GAP = 15;
 var TEXT_WIDTH = 50;
-var BAR_HEIGHT = 20;
+var BAR_HEIGHT = 80;
 var barWidth = CLOUD_WIDTH - GAP - TEXT_WIDTH - GAP;
 
 var renderCloud = function(ctx, x, y, color) {
   ctx.fillStyle = color;
   ctx.fillRect(x, y, CLOUD_WIDTH, CLOUD_HEIGHT);
 };
+
 
 window.renderStatistics = function(ctx) {
   renderCloud(
@@ -29,44 +30,41 @@ window.renderStatistics = function(ctx) {
     '#fff',
   );
 
+  /**ctx.translate(0, canvas.height);
+  ctx.rotate(-Math.PI/2);**/
+
   ctx.fillStyle = '#000';
-  ctx.fillText(
-    'Вы',
-    CLOUD_X + GAP + FONT_GAP + (GAP + BAR_HEIGHT) * 0,
-    CLOUD_Y + GAP
-  );
-  ctx.fillRect(120, 90, 40, 200);
+  ctx.fillRect(120, 150, 40, 110);
+  ctx.fillStyle = '#000';
+  ctx.fillText('Вы', 120, 295);
+  ctx.fillText(1745, 120, 140);
 
 
-  ctx.fillStyle = '#FF0000';
-  ctx.fillText(
-    'Иван',
-    CLOUD_X + GAP + FONT_GAP + (GAP + BAR_HEIGHT) * 1,
-    CLOUD_Y + GAP
-  );
-  ctx.fillRect(160, 90, 40, 200);
+  ctx.fillStyle = '#0000FF';
+  ctx.fillRect(210, 150, 40, 130);
+  ctx.fillStyle = '#000';
+  ctx.fillText('Иван', 210, 295);
+  ctx.fillText(1545, 210, 140);
 
-  ctx.fillStyle = '#FF0000';
-  ctx.fillText(
-    'Юлия',
-    CLOUD_X + GAP + FONT_GAP + (GAP + BAR_HEIGHT) * 2,
-    CLOUD_Y + GAP
-  );
-  ctx.fillRect(210, 90, 40, 200);
+  ctx.fillStyle = '#4682B4';
+  ctx.fillRect(300, 150, 40, 120);
+  ctx.fillStyle = '#000';
+  ctx.fillText('Юлия', 300, 295);
+  ctx.fillText(1245, 300, 140);
 
-  ctx.fillStyle = '#FF0000';
-  ctx.fillText(
-    'Васян',
-    CLOUD_X + GAP + FONT_GAP + (GAP + BAR_HEIGHT) * 2,
-    CLOUD_Y + GAP
-  );
-  ctx.fillRect(260, 90, 40, 200);
+  ctx.fillStyle = '#00BFFF';
+  ctx.fillRect(390, 150, 40, 100);
+  ctx.fillStyle = '#000';
+  ctx.fillText('Васян', 390, 295);
+  ctx.fillText(1745, 390, 140);
 
   ctx.fillStyle = '#000';
   ctx.font = "16px PT Mono";
-  ctx.fillText("Ура вы победили!", 50, 100);
-  ctx.fillText("Список результатов: ", 50, 110);
+  ctx.fillText("Ура вы победили!", 120, 100);
+  ctx.fillText("Список результатов: ", 120, 110);
+
 };
+
 
 
 
