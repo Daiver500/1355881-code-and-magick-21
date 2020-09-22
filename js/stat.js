@@ -32,26 +32,46 @@ window.renderStatistics = function(ctx) {
   ctx.rotate(-Math.PI/2);**/
 
   ctx.fillStyle = '#000';
-  ctx.fillRect(CLOUD_X + GAP_LEFT, 150, BAR_WIDTH , 110);
+  ctx.fillRect(
+    CLOUD_X + GAP_LEFT,
+    CLOUD_X + CLOUD_Y,
+    BAR_WIDTH,
+    110
+  );
   ctx.fillStyle = '#000';
   ctx.fillText('Вы', 120, 295);
   ctx.fillText(1745, 120, 140);
 
 
   ctx.fillStyle = '#0000FF';
-  ctx.fillRect(CLOUD_X + GAP_LEFT + COLUMN_GAP, 150, BAR_WIDTH , 130);
+  ctx.fillRect(
+    CLOUD_X + GAP_LEFT + COLUMN_GAP,
+    CLOUD_X + CLOUD_Y,
+    BAR_WIDTH,
+    130
+  );
   ctx.fillStyle = '#000';
   ctx.fillText('Иван', 210, 295);
   ctx.fillText(1545, 210, 140);
 
   ctx.fillStyle = '#4682B4';
-  ctx.fillRect(CLOUD_X + GAP_LEFT + COLUMN_GAP * 2, 150, BAR_WIDTH , 120);
+  ctx.fillRect(
+    CLOUD_X + GAP_LEFT + COLUMN_GAP * 2,
+    CLOUD_X + CLOUD_Y,
+    BAR_WIDTH,
+    120
+  );
   ctx.fillStyle = '#000';
   ctx.fillText('Юлия', 300, 295);
   ctx.fillText(1245, 300, 140);
 
   ctx.fillStyle = '#00BFFF';
-  ctx.fillRect(CLOUD_X + GAP_LEFT + COLUMN_GAP * 3, 150, BAR_WIDTH , 100);
+  ctx.fillRect(
+    CLOUD_X + GAP_LEFT + COLUMN_GAP * 3,
+    CLOUD_X + CLOUD_Y,
+    BAR_WIDTH,
+    100
+  );
   ctx.fillStyle = '#000';
   ctx.fillText('Васян', 390, 295);
   ctx.fillText(1745, 390, 140);
