@@ -5,9 +5,12 @@ var CLOUD_HEIGHT = 270;
 var CLOUD_X = 100;
 var CLOUD_Y = 50;
 var GAP = 10;
+var GAP_LEFT = 20;
 var COLUMN_GAP = 50;
 var BAR_WIDTH = 40;
-var GAP_LEFT = 20;
+var TEXT_HEIGHT = 20;
+var BAR_HEIGHT = CLOUD_X + CLOUD_Y - TEXT_WIDTH;
+
 
 var renderCloud = function(ctx, x, y, color) {
   ctx.fillStyle = color;
@@ -36,7 +39,7 @@ window.renderStatistics = function(ctx) {
     CLOUD_X + GAP_LEFT,
     CLOUD_X + CLOUD_Y,
     BAR_WIDTH,
-    110
+    BAR_HEIGHT
   );
   ctx.fillStyle = '#000';
   ctx.fillText('Вы', 120, 295);
@@ -48,7 +51,7 @@ window.renderStatistics = function(ctx) {
     CLOUD_X + GAP_LEFT + COLUMN_GAP,
     CLOUD_X + CLOUD_Y,
     BAR_WIDTH,
-    130
+    BAR_HEIGHT
   );
   ctx.fillStyle = '#000';
   ctx.fillText('Иван', 210, 295);
@@ -59,7 +62,7 @@ window.renderStatistics = function(ctx) {
     CLOUD_X + GAP_LEFT + COLUMN_GAP * 2,
     CLOUD_X + CLOUD_Y,
     BAR_WIDTH,
-    120
+    BAR_HEIGHT
   );
   ctx.fillStyle = '#000';
   ctx.fillText('Юлия', 300, 295);
@@ -70,7 +73,7 @@ window.renderStatistics = function(ctx) {
     CLOUD_X + GAP_LEFT + COLUMN_GAP * 3,
     CLOUD_X + CLOUD_Y,
     BAR_WIDTH,
-    100
+    BAR_HEIGHT
   );
   ctx.fillStyle = '#000';
   ctx.fillText('Васян', 390, 295);
